@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+import math
+
+flag = False
+for i in range(1,1000):
+	for j in range(1,1000 - i):
+		if (i**2 + j**2 == (1000 - i - j)**2):
+			print(i * j * (1000 - i - j))
+			flag = True
+			break
+	if flag:
+		break
