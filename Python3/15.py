@@ -42,11 +42,10 @@ moves = ['right','down']
 ctr = 0
 for i in range(size):
 	for j in range(size):
-		lattice[i][j] = {"right":j + 1,'down': i + 1, 'coords':(i,j)}
-	lattice[i][size] = {'right':None,'down': i + 1, 'coords':(i,size)}
-	lattice[size][i] = {'right':i+1,'down': None, 'coords':(size,i)}
-
-lattice[size][size] = {'right':None,'down': None, 'coords':(size,size)}
+		lattice[i][j] = {"right":j + 1,'down': i + 1}
+	lattice[i][size] = {'right':None,'down': i + 1}
+	lattice[size][i] = {'right':i+1,'down': None}
+lattice[size][size] = {'right':None,'down': None}
 
 travel(lattice,0,0)
 print(ctr)
